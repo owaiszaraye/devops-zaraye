@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.7" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.203.13" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.53" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Zaraye.Core\Zaraye.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\Zaraye.Data\Zaraye.Data.csproj" />
+    <ProjectReference Include="..\..\Libraries\Zaraye.Services\Zaraye.Services.csproj" />
+    <ProjectReference Include="..\Zaraye.Framework\Zaraye.Framework.csproj" />
+  </ItemGroup>
+
+</Project>

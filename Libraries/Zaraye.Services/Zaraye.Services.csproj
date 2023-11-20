@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Copyright>Copyright © Zaraye, Ltd</Copyright>
+    <Company>Zaraye, Ltd</Company>
+    <Authors>Zaraye, Ltd</Authors>
+    <Version>4.5.0.0</Version>
+    <Description>This project contains a set of core services, business logic, validations or calculations related with the data, if needed. Some people call it Business Access Layer (BAL).</Description>
+    <PackageLicenseUrl>https://www.zaraye.co/license</PackageLicenseUrl>
+    <PackageProjectUrl>https://www.zaraye.co/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Zaraye-Co</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logging\Caching\**" />
+    <Compile Remove="Seller\**" />
+    <EmbeddedResource Remove="Logging\Caching\**" />
+    <EmbeddedResource Remove="Seller\**" />
+    <None Remove="Logging\Caching\**" />
+    <None Remove="Seller\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.201.12" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+    <PackageReference Include="ClosedXML" Version="0.97.0" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2.3" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="MaxMind.GeoIP2" Version="5.1.0" />
+    <PackageReference Include="QuestPDF" Version="2022.11.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.3" />
+    <PackageReference Include="Svg.Skia" Version="0.5.18" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zaraye.Core\Zaraye.Core.csproj" />
+    <ProjectReference Include="..\Zaraye.Data\Zaraye.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>

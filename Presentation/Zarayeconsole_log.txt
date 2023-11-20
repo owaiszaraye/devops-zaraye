@@ -1,0 +1,31 @@
+[Information] [Zaraye.Services.Logging.AppLoggerService] Hello World!
+[Information] [Zaraye.Services.Logging.AppLoggerService] Logs contain timestamp and log level.
+[Information] [Zaraye.Services.Logging.AppLoggerService] Each log message is fit in a single line.
+[Information] [Zaraye.Services.Logging.AppLoggerService] City id is required
+[Warning] [Zaraye.Services.Logging.AppLoggerService]    at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
+[Information] [Zaraye.Services.Logging.AppLoggerService] Zaraye
+[Information] [Zaraye.Services.Logging.AppLoggerService] Each log message is fit in a single line.
+[Information] [Zaraye.Services.Logging.AppLoggerService] City id is required
+[Information] [Zaraye.Services.Logging.AppLoggerService] Zaraye
+[Information] [Zaraye.Services.Logging.AppLoggerService] Each log message is fit in a single line.
+[Warning] [Zaraye.Services.Logging.AppLoggerService]    at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
+[Information] [Zaraye.Services.Logging.AppLoggerService] /n
+[Error] [Zaraye.Services.Logging.AppLoggerService] System.ApplicationException: City id is required
+   at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
+[Information] [Zaraye.Services.Logging.AppLoggerService] City id is required
+[Information] [Zaraye.Services.Logging.AppLoggerService] Zaraye
+[Information] [Zaraye.Services.Logging.AppLoggerService] Each log message is fit in a single line.
+[Warning] [Zaraye.Services.Logging.AppLoggerService]    at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
+[Error] [Zaraye.Services.Logging.AppLoggerService] 
+ this is exception System.ApplicationException: City id is required
+   at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
+[Information] [Zaraye.Services.Logging.AppLoggerService] City id is required
+[Information] [Zaraye.Services.Logging.AppLoggerService] Zaraye
+[Information] [Zaraye.Services.Logging.AppLoggerService] Each log message is fit in a single line.
+[Warning] [Zaraye.Services.Logging.AppLoggerService]    at Zaraye.Services.Common.CommonService.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Services\Common\CommonService.cs:line 246
+   at Zaraye.Controllers.V4.Security.CommonController.AllAreas(Int32 cityId) in C:\Users\Hp\Documents\Projects\zaraye-api-project\Presentation\Zaraye\Controllers\V4\Common\CommonController.cs:line 98
