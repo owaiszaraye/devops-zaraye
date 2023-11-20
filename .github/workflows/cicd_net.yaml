@@ -3,10 +3,7 @@ name: zaraye-api-project Windows
 on:
   push:
     branches:
-      - main
-env:
-  DOTNET_VERSION: '7.0.x'
-  
+      - main  
 jobs:
   build:
     runs-on: windows-latest
@@ -18,7 +15,8 @@ jobs:
     - name: Setup .NET 7.0
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+        dotnet-version: |
+         '7.0'
 
     - name: Restore dependencies
       run: dotnet restore
