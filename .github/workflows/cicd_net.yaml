@@ -1,0 +1,59 @@
+name: zaraye-api-project Windows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.0  
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Test
+      run: dotnet test
+
+    - name: Publish Artifact
+      run: dotnet publish -c Release -o $(Build.ArtifactStagingDirectory)
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: publish
+        path: $(Build.ArtifactStagingDirectory)
+
+  deploy:
+    needs: build
+    runs-on: windows-latest
+
+    steps:
+    - name: Download Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: publish
+        path: 'C:/inetpub/wwwroot'
+
+    - name: Deploy to Windows Server
+      env:
+        SERVER_IP: ${{ secrets.SERVER_IP }} 
+        SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+        SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+      run: |
+        $credential = New-Object System.Management.Automation.PSCredential ($env:SERVER_USERNAME, $securePassword)
+        $sessionOption = New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck
+        $session = New-PSSession -ComputerName $env:SERVER_IP -Credential $credential -SessionOption $sessionOption
+        Enter-PSSession $session
