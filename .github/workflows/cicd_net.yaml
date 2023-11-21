@@ -25,16 +25,16 @@ jobs:
 
     - name: Test
       run: dotnet test
-
+      
     - name: Publish Artifact
       run: dotnet publish -c Release -o publish
-
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: publish
-        path: $(Build.ArtifactStagingDirectory)
+        path: bin/Release
 
+    
   deploy:
     needs: build
     runs-on: windows-latest
