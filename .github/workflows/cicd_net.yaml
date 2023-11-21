@@ -27,7 +27,7 @@ jobs:
       run: dotnet test
 
     - name: Publish Artifact
-      run: dotnet publish -c Release -o $(Build.ArtifactStagingDirectory)
+      run: dotnet publish -c Release -o publish
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
