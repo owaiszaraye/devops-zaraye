@@ -3,17 +3,20 @@ name: zaraye-api-project Windows
 on:
   push:
     branches:
-      - main  
+      - main
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-    - script: set
-      displayName: show all env vars
-          
+    - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.0
 
     - name: Restore dependencies
       run: dotnet restore
