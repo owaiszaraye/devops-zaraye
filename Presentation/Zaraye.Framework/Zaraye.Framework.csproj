@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Copyright>Copyright © Zaraye, Ltd</Copyright>
+    <Company>Zaraye, Ltd</Company>
+    <Authors>Zaraye, Ltd</Authors>
+    <Version>4.5.0.0</Version>
+    <Description>Zaraye.Framework is a class library project containing some common presentation things for Nop.Web project</Description>
+    <PackageLicenseUrl>https://www.zaraye.co/license</PackageLicenseUrl>
+    <PackageProjectUrl>https://www.zaraye.co/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Zaraye-Co</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\**" />
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Factories\**" />
+    <Compile Remove="Globalization\**" />
+    <Compile Remove="Localization\**" />
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="Models\AdminAreaTour\**" />
+    <Compile Remove="Models\DataTables\**" />
+    <Compile Remove="Models\Extensions\**" />
+    <Compile Remove="Mvc\Razor\**" />
+    <Compile Remove="Security\**" />
+    <Compile Remove="TagHelpers\**" />
+    <Compile Remove="Validators\**" />
+    <EmbeddedResource Remove="Components\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Factories\**" />
+    <EmbeddedResource Remove="Globalization\**" />
+    <EmbeddedResource Remove="Localization\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="Models\AdminAreaTour\**" />
+    <EmbeddedResource Remove="Models\DataTables\**" />
+    <EmbeddedResource Remove="Models\Extensions\**" />
+    <EmbeddedResource Remove="Mvc\Razor\**" />
+    <EmbeddedResource Remove="Security\**" />
+    <EmbeddedResource Remove="TagHelpers\**" />
+    <EmbeddedResource Remove="Validators\**" />
+    <None Remove="Components\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Factories\**" />
+    <None Remove="Globalization\**" />
+    <None Remove="Localization\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="Models\AdminAreaTour\**" />
+    <None Remove="Models\DataTables\**" />
+    <None Remove="Models\Extensions\**" />
+    <None Remove="Mvc\Razor\**" />
+    <None Remove="Security\**" />
+    <None Remove="TagHelpers\**" />
+    <None Remove="Validators\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+   
+    <Compile Remove="Infrastructure\AdminWidgetZones.cs" />
+   
+    <Compile Remove="Infrastructure\LazyInstance.cs" />
+   
+    <Compile Remove="Infrastructure\PublicWidgetZones.cs" />
+   
+    
+   
+  
+   
+    
+    <Compile Remove="Models\ActionConfirmationModel.cs" />
+    <Compile Remove="Models\AlertModel.cs" />
+    <Compile Remove="Models\BasePagedListModel.cs" />
+    <Compile Remove="Models\DeleteConfirmationModel.cs" />
+    <Compile Remove="Models\IAclSupportedModel.cs" />
+    <Compile Remove="Models\IConfigModel.cs" />
+    <Compile Remove="Models\IDiscountSupportedModel.cs" />
+    <Compile Remove="Models\ILocalizedLocaleModel.cs" />
+    <Compile Remove="Models\ILocalizedModel.cs" />
+    <Compile Remove="Models\IPagedModel.cs" />
+    <Compile Remove="Models\IPluginModel.cs" />
+    <Compile Remove="Models\ISettingsModel.cs" />
+    <Compile Remove="Models\IStoreMappingSupportedModel.cs" />
+    <Compile Remove="Mvc\Filters\CheckAccessClosedStoreAttribute.cs" />
+    <Compile Remove="Mvc\Filters\CheckAccessPublicStoreAttribute.cs" />
+    <Compile Remove="Mvc\Filters\CheckAffiliateAttribute.cs" />
+    <Compile Remove="Mvc\Filters\CheckDiscountCouponAttribute.cs" />
+    <Compile Remove="Mvc\Filters\CheckLanguageSeoCodeAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ForceMultiFactorAuthenticationAttribute.cs" />
+    <Compile Remove="Mvc\Filters\HttpsRequirementAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ParameterBasedOnFormNameAndValueAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ParameterBasedOnFormNameAttribute.cs" />
+    <Compile Remove="Mvc\Filters\PublishModelEventsAttribute.cs" />
+    <Compile Remove="Mvc\Filters\SaveIpAddressAttribute.cs" />
+    <Compile Remove="Mvc\Filters\SaveLastActivityAttribute.cs" />
+    <Compile Remove="Mvc\Filters\SaveLastVisitedPageAttribute.cs" />
+    <Compile Remove="Mvc\Filters\SaveSelectedTabsAttribute.cs" />
+    <Compile Remove="Mvc\Filters\SignOutFromExternalAuthenticationAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ValidateCaptchaAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ValidateHoneypotAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ValidateIpAddressAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ValidatePasswordAttribute.cs" />
+    <Compile Remove="Mvc\Filters\WwwRequirementAttribute.cs" />
+    <Compile Remove="Mvc\Filters\ZarayeNullValidationMessageAttribute.cs" />
+    <Compile Remove="Mvc\NullJsonResult.cs" />
+    <Compile Remove="Mvc\Routing\LanguageParameterTransformer.cs" />
+    <Compile Remove="Mvc\Routing\UrlHelperExtensions.cs" />
+    <Compile Remove="Mvc\Routing\ZarayeRedirectResultExecutor.cs" />
+    <Compile Remove="Mvc\RssActionResult.cs" />
+  </ItemGroup>
+	<ItemGroup>
+	<PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.372" />
+    <PackageReference Include="WebMarkupMin.AspNetCore7" Version="2.13.5" />
+    <PackageReference Include="WebMarkupMin.NUglify" Version="2.13.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Zaraye.Core\Zaraye.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\Zaraye.Data\Zaraye.Data.csproj" />
+    <ProjectReference Include="..\..\Libraries\Zaraye.Services\Zaraye.Services.csproj" />
+  </ItemGroup>
+
+</Project>
