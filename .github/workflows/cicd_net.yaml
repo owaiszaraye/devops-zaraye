@@ -8,24 +8,12 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - script: set
-        displayName: show all env vars
-
-      - checkout: self
-        persistCredentials: true
-
-      - task: UseDotNet@2
-        displayName: 'Use .NET 7.x'
-        inputs:
-          packageType: 'sdk'
-          version: 7.x
-          performMultiLevelLookup: true
-          includePreviewVersions: false
-          installationPath: $(Agent.ToolsDirectory)/dotnet 
+    - script: set
+      displayName: show all env vars
           
-       uses: actions/checkout@v2
-       - name: Setup .NET
-       uses: actions/setup-dotnet@v1
+      uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
 
     - name: Restore dependencies
       run: dotnet restore
